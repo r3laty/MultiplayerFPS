@@ -32,5 +32,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             $"\nID {playerId}");
 
         GameObject playerInstance = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
+        playerInstance.GetComponent<PlayerSetup>().IsLocalPlayer();
     }
 }

@@ -13,10 +13,12 @@ GameObject:
   - component: {fileID: 3365659659938375341}
   - component: {fileID: 8156262234640820035}
   - component: {fileID: 7011112913899122886}
+  - component: {fileID: 1286960990018038710}
   - component: {fileID: 1022651615817471875}
   - component: {fileID: 8311691824760212288}
   - component: {fileID: 7993483252165277563}
   - component: {fileID: 1749403102003592025}
+  - component: {fileID: 2829691364851058787}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -140,7 +142,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1022651615817471875
+--- !u!114 &1286960990018038710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,10 +151,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 2435417798278320166}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b22cd59b0645414f8f58f206bed13d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 1022651615817471875}
+  mainCam: {fileID: 8396077183254270006}
+--- !u!114 &1022651615817471875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435417798278320166}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54077e92e5f43c346acd9234f426fd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 500
+  speed: 300
+  sprintSpeed: 500
+  jumpHeight: 200
 --- !u!114 &8311691824760212288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +227,27 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!135 &2829691364851058787
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435417798278320166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.518034
+  m_Center: {x: 0, y: -0.80599666, z: -0.00000011920929}
 --- !u!1 &2693919835592716713
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7206120317479575253
 Transform:
   m_ObjectHideFlags: 0
