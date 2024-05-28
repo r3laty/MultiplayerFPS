@@ -140,7 +140,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!114 &1286960990018038710
 MonoBehaviour:
@@ -168,9 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54077e92e5f43c346acd9234f426fd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  cameraTransform: {fileID: 7206120317479575253}
+  speed: 400
   sprintSpeed: 500
-  jumpHeight: 200
+  jumpForce: 0.5
 --- !u!114 &8311691824760212288
 MonoBehaviour:
   m_ObjectHideFlags: 0
