@@ -39,7 +39,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5071242788393828559}
   - {fileID: 7206120317479575253}
   - {fileID: 489163546150476012}
   m_Father: {fileID: 0}
@@ -517,37 +516,6 @@ MonoBehaviour:
   smoothing: {x: 3, y: 3}
   characterBody: {fileID: 2435417798278320166}
   scoped: 0
---- !u!1 &7606747330482563376
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5071242788393828559}
-  m_Layer: 0
-  m_Name: ShotPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5071242788393828559
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7606747330482563376}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.709, z: 1.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3698540774359154134}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8435938310132561903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -619,6 +587,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63f36ed41b435304685535b8e0e39059, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5898671547827701132}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63f36ed41b435304685535b8e0e39059, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 508109011781413196}
   m_SourcePrefab: {fileID: 100100000, guid: 63f36ed41b435304685535b8e0e39059, type: 3}
 --- !u!4 &8257561366281457668 stripped
 Transform:
@@ -644,5 +615,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 25
   bulletsCount: 30
+  fireRate: 10
   myCam: {fileID: 8396077183254270006}
   fireVFX: {fileID: 7039127050068498200, guid: f48df6a53b8ed774796af78531392504, type: 3}
+--- !u!114 &508109011781413196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778378667807099582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9d8b7255d1daf42b4d219fa2bdef45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swayClamp: 0.09
+  smoothing: 3

@@ -5,6 +5,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private int damage;
     [SerializeField] private float bulletsCount = 30;
+    [SerializeField] private float fireRate = 10;
     [Space]
     [SerializeField] private Camera myCam;
     [Header("VFX")]
@@ -14,9 +15,15 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if(_nextFire > 0)
         {
-            //bulletsCount--;
+            _nextFire -= Time.deltaTime;
+        }
+
+        if (Input.GetButton("Fire1") && _nextFire <= 0 && bulletsCount <= 30 && bulletsCount > 0)
+        {
+            _nextFire = 1 / fireRate;
+            bulletsCount--;
 
             Fire();
         }
