@@ -4,6 +4,8 @@ using TMPro;
 
 public class Health : MonoBehaviour
 {
+    [HideInInspector] public bool IsLocalPlayer;
+
     [SerializeField] private int health;
     [Header("UI")]
     [SerializeField] private TextMeshPro healthbarText;
@@ -17,6 +19,11 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
+            if (IsLocalPlayer)
+            {
+                NetworkManager.Instance.SpawnPlayer();
+            }
+
             Destroy(gameObject);
         }
     }

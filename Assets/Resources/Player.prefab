@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7b20168a0c7a94ebc4bc22d2501cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsLocalPlayer: 0
   health: 100
   healthbarText: {fileID: 1463981492420045047}
 --- !u!114 &8311691824760212288
