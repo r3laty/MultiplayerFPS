@@ -8,14 +8,16 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int health;
     [Header("UI")]
-    [SerializeField] private TextMeshPro healthbarText;
+    [SerializeField] private TextMeshPro gameHealthbarText;
+    [SerializeField] private TextMeshProUGUI menuHealthbarText;
 
     [PunRPC]
     public void TakeDamage(int damage)
     {
         health -= damage;
         Debug.Log("Good shot");
-        healthbarText.text = health.ToString() + " Hp";
+        gameHealthbarText.text = health.ToString() + " Hp";
+        menuHealthbarText.text = health.ToString() + "/100";
 
         if (health <= 0)
         {
